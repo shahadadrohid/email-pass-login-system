@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase.init";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
@@ -75,7 +75,7 @@ const SignUp = () => {
 
                 <input type="checkbox" name="terms" id="terms" />
                 <label htmlFor="terms" className="ml-2">Accept terms & Conditions</label>
-
+                <p className="text-gray-500 text-lg">Already Have an account? <Link to="/login" className="font-semibold text-blue-400">Login here</Link></p>
                 <br />
                 <input className="mt-2 w-1/2 bg-blue-500 text-white
                 py-2 rounded-lg font-bold" type="submit" value="Register" />
